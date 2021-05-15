@@ -1,5 +1,5 @@
 			Dungeon Crawl MOD for Baldur's Gate II
-				   Version 12
+				   Version 13
 			  A Pocket Plane Group Project
 			   http://www.pocketplane.net
 
@@ -163,6 +163,8 @@ Italian Translation: Ilot
 
 Polish Translation: Aristo 
 
+French Translation: deratiseur
+
 WoRm's custom areas and animations are available at The Black Wyrm's Forums:
 http://forums.blackwyrmlair.net/index.php?showforum=83
 
@@ -183,6 +185,9 @@ winLAME					http://winlame.sourceforge.net
 -------------------
 5. Version History
 -------------------
+
+Version 13
+-French version added, by deratiseur
 
 Version 12
 -updated dc.ini with the GitHub address for download
