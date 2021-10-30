@@ -1,5 +1,5 @@
                     Turnabout: An Ascension Add-On
-		      Version 1.4
+		      Version 1.5
               A Pocket Plane Group Project for Baldur's Gate 2
 	              http://www.pocketplane.net
 
@@ -214,6 +214,8 @@ We hope you enjoy.
 
 
 Version History:
+
+v1.5: -all instances for crossmod with Lava's Khalid for BGII mod considered.
 
 v1.4: Unified version for classic BGII and EE, by Austin and jastey:
 	-Moved tp2 into mod folder.
