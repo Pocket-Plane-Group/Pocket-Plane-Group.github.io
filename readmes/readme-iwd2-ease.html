@@ -1,0 +1,791 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Icewind Dale II Ease of Use (EoU) Mod</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="style/weidu_readme_cam_110823.css" type="text/css" />
+<link href="style/weidu_icon.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<div id="container">
+  <div class="ribbon_menu">
+    <ul>
+      <li><a href="#Overview">Overview</a></li>
+      <li><a href="#Compatibility">Compatibility</a></li>
+      <li><a href="#Bugs">Bug Reporting</a></li>
+      <li><a href="#Installation">Installation</a></li>
+      <li><a href="#Contents">Contents</a></li>
+      <li><a href="#Contact">Contact</a></li>
+      <li><a href="#Thanks">Thanks</a></li>
+      <li><a href="#Credits">Credits</a></li>
+      <li><a href="#History">History</a></li>
+    </ul>
+    <span><img src="style/weidu_logo.png" width="283" height="54" alt="WeiDU.org logo" /></span> </div>
+  <div class="ribbon_bubble">
+    <div class="ribbon_rectangle">
+      <h1> Icewind Dale II
+        Ease of Use (EoU) Mod</h1>
+    </div>
+    <div class="ribbon_triangle-l"></div>
+    <div class="ribbon_triangle-r"></div>
+    <div class="section">
+      <p><strong><a href="https://weidu.org/">A WeiDU.org Mod</a><br />
+        Author:</strong> Westley Weimer, currently maintained by CamDawg<br />
+        <strong> On the web: </strong><a href="https://forums.pocketplane.net/index.php?board=43.0">Discussion
+        forum</a></p>
+      <p><strong>Version: Test Build 1 for v16</strong><br />
+        <strong> Languages:</strong> English and Spanish<br />
+        <strong>Platforms: </strong>Windows, macOS, and Linux<br />
+        <strong>GitHub: </strong><a href="https://github.com/Pocket-Plane-Group/iwd2_ease_of_use">Pocket-Plane-Group/iwd2_ease_of_use</a></p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Overview" name="Overview"></a>
+      <h2>Overview</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>From Westley Weimer's original readme:</p>
+      <div class="kit_description">
+        <p>This is a collection of useful mods that I threw together. Many of them
+          were written by others. You can find the original readmes in the
+          &quot;ease\readmes&quot; folder. Note that this README supersedes those: the
+          individual READMEs cannot be trusted. :-) </p>
+        <p>Note: Some people regard many of these changes as cheats. All of the
+          components are optional. Use your own discretion. </p>
+      </div>
+      <p>While I was unable to find the earlier readmes Wes was referencing, <a href="https://raw.githubusercontent.com/Pocket-Plane-Group/iwd2_ease_of_use/master/iwd2-ease/docs/readme-iwd2-ease.txt">the last readme</a> from Wes is available in the docs folder. If I locate the other readmes (or if someone has them and can send them along) I'll them to the docs folder as well. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Compatibility" name="Compatibility"></a>
+      <h2>Compatibility</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>As of v16, IWD2 Ease of Use should be compatible with most, if not all, other WeiDU mods for IWD2. This includes The IWD2 NPC Project and the IWD2EE mod. In general this mod should go late, if not last, in your install order, with the lone exception being the IWD2EE Mod Compatibility Patch. </p>
+      <p>Because of how <strong>Randomized Treasure</strong> is coded it, <em>specifically</em>, should be installed as late as possible (more info in the component description). </p>
+      <p>Version 16 was a major recode, bringing the mod forward two decades from its previous release in 2003. As such it's substantially more compatible and less overwritey&mdash;this isn't a criticism of the mod, as all mods in 2003 were coded this way since we didn't yet have the tools. In general, you're going to see a lot of 'patches instead of overwrites' in the v16 notes. This is done to maximize compatibility, as we no longer need to overwrite a file to make a small&mdash;or even a big&mdash;change. Patching also generally means we can search dynamically and catch content added by other mods. </p>
+      <p><strong>Compatibility</strong></p>
+      <p>A great deal of time and effort has gone into modernizing the code, which solves most compatibility issues right out of the gate. In places where another mod has already made the changes that EoU would make, or done it in a very different way, EoU will detect the other mod and skip the component. Notes for IWD2EE specifically are as follows:</p>
+      <ul>
+        <li><em>IWD2EE Class Revisions</em> already makes the changes in <strong>Non-Combat War Chant of the Sith </strong>and<strong> Improved Monk Fists</strong>, so the EoU components will be skipped. <em>Class Revisions </em>also approaches shapeshifting in a more systematic and different way, so <strong>Alternate Shapeshifting</strong> is also skipped if <em>Class Revisions</em> is installed. </li>
+        <li><em>IWD2EE Item Revisions</em> rebalances weapons in a systematic and different way. As such, EoU components <strong>Improved Holy Avenger</strong>, <strong>Improved Moonblades</strong>, and <strong>Stronger Bastard Swords</strong> will be skipped though <strong> Two-Handed Greatsword Holy Avenger</strong> will work. Item Revisions restores most, but not all, of the items in <strong>Include Forgotten Armor and Shields</strong>. As such, this component remains available, but will only restore the handful of items not already covered. </li>
+        <li><em>IWD2EE Spell Revisions</em> already makes the changes in <strong>No Fists for Iron Body</strong>, so the EoU component will be skipped. <strong> Additional Druid Spells</strong> will work alongside this component. For spells  made available to druids from <em>IWD2EE Spell Revisions</em>, <strong>Additional Druid Spells</strong> will make no changes. For the handful not covered by <em>Spell Revisions</em>, <strong>Additional Druid Spells</strong> will make its normal changes. </li>
+        <li><em>IWD2EE Revise Racial Level Adjustment</em> addresses the issue in <strong>Deep Gnome Starting XP</strong>, so the EoU component will be skipped. </li>
+        <li><em>IWD2EE Looser Alignment Restrictions</em> is an alternative to <strong>No Alignment Class Restrictions</strong>. If the component from IWD2EE is detected, EoU will skip this component. </li>
+        <li><em>IWD2EE Enemies give the same amount of experience regardless of the party's level</em> (either variant) are alternatives to <strong>Always Get Some XP Per Kill</strong>. If either component from IWD2EE is detected, EoU will skip this component. </li>
+        <li><em>IWD2EE Minor Damage Resistance for Armor and Shields</em> is an alternative to <strong>Armor and Shields Provide Damage Resistance</strong>. If the component from IWD2EE is detected, EoU will skip this component. </li>
+      </ul>
+      <p><strong>Other Compatibility Notes</strong></p>
+      <ul>
+        <li><em>Tweaks Anthology</em> has four components (<em>Increase Ammo Stack Size</em>; <em>Increase Jewelry, Gem, and Miscellaneous Item Stacks</em>; <em>Increase Potion Stacking</em>; and <em>Increase Scroll Stacking</em>)      that do, collectively, the same thing that EoU's <strong> Infinite Stacking</strong> does. Installing them together is redundant, but shouldn't cause any issues. Similarly, <em>Identify All Items</em> (Tweaks) and <strong>All Items Identified</strong> (EoU) do the exact same thing&mdash;also redundant but harmless. </li>
+      </ul>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Bugs" name="Bugs"></a>
+      <h2>Bug Reporting</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>If you should encounter any bugs, please report them to the authors at the <a href="https://forums.pocketplane.net/index.php?board=43.0">forum</a>. In addition, Icewind Dale II Ease of Use is <a href="https://github.com/Pocket-Plane-Group/iwd2_ease_of_use">available on GitHub</a>, so fixes and changes can be submitted by the community. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Installation" name="Installation"></a>
+      <h2>Installation</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>First time installing a mod? Check out G3's comprehensive tutorial: <a href="https://www.gibberlings3.net/forums/topic/33164-a-new-player&rsquo;s-guide-to-installing-and-playing-mods/">A New Player&rsquo;s Guide to Installing and Playing Mods</a>. </p>
+      <p><strong>Windows</strong><br />
+        The Icewind Dale II Ease of Use Mod for Windows is distributed as a self-extracting archive and includes a WeiDU installer. To install, simply double-click the archive and follow the instructions on screen.</p>
+      <p>Alternatively, the files can be extracted into your game directory using <a href="http://www.7-zip.org/download.html">7zip</a> or <a href="http://www.rarlab.com/download.htm">WinRAR</a>. When properly extracted, your game directory will contain <strong>setup-iwd2-ease.exe</strong> and the folder<strong> iwd2-ease</strong>. To install, double-click <strong>setup-iwd2-ease.exe</strong> and follow the instructions on screen.</p>
+      <p>You can run <strong>setup-iwd2-ease.exe</strong> in your game folder to reinstall, uninstall or otherwise change components.</p>
+      <p><strong>MacOS</strong><br />
+        The Icewind Dale II Ease of Use Mod for macOS is distributed as a compressed tarball and includes a WeiDU installer.</p>
+      <p>First, extract the files from the tarball into your game directory. When properly extracted, your game directory will contain <strong>setup-iwd2-ease</strong>, <strong>setup-iwd2-ease.command</strong>, and the folder<strong> iwd2-ease</strong>. To install, double-click <strong>setup-iwd2-ease.command</strong> and follow the instructions on screen.</p>
+      <p>You can run <strong>setup-iwd2-ease.command</strong> in your game folder to reinstall, uninstall or otherwise change components.</p>
+      <p><strong>Linux</strong><br />
+        The Icewind Dale II Ease of Use Mod for Linux is distributed as a compressed tarball and does not include a WeiDU installer. Linux users will need to do a one-time install of <abbr title="Weimer Dialogue Utility"><abbr title="Weimer Dialogue Utility">WeiDU</abbr></abbr> (and a few other adjustments) as described in <a href="https://moebiusproject.gitlab.io/mods_on_linux" rel="external nofollow noopener" target="_blank">this great writeup</a>. </p>
+      <p>To install, run 'WeInstall iwd2-ease' in your game folder. </p>
+      <p><strong> Note for Complete Uninstallation</strong><br />
+        In addition to the methods above for removing individual components, you can completely uninstall the mod using setup-iwd2-ease --uninstall at the command line to remove all components without wading through prompts.</p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Contents" name="Contents"></a>
+      <h2>Contents</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>The Icewind Dale II Ease of Use Mod has multiple components, all of which can be installed independently. While Cam has made some changes to reflect changes in components, for the most part the text has been preserved from the original readme. Any and all editorial comments are from Wes unless otherwise noted. </p>
+      <div class="deprecated">
+        <p><strong>Bugfixes - DEPRECATED</strong></p>
+        <p>This component has been deprecated. The fixes are already in IWD2EE and/or IWD2 Fixpack, and a dedicated project is a better home for fixes than a lone component in an otherwise late-install mod. </p>
+      </div>
+      <p><strong> Infinite Stacking</strong></p>
+      <p>This allows you to stack up to 9999 of any type of stacking weapon or
+        potion. This game should not be a quest for inventory management. </p>
+      <p><strong> Non-Combat War Chant of the Sith</strong><br />
+        <em>Compatibility: Skipped if IWD2EE's 'Class Revisions' is installed, as it already makes this change</em></p>
+      <p> The Jedi War Song only works if enemies are present, but often you would
+        like to regenerate even if they aren't. This component makes the song work
+        whenever your bard sings it. </p>
+      <p><strong> Improved Holy Avenger</strong><br />
+        <em>Compatibility: Skipped if IWD2EE's 'Item Revisions' is installed, as it offers alternative functionality</em></p>
+      <p> This changes all Holy Avengers in the game to additionally have the
+        following characteristics: </p>
+      <ul>
+        <li>Lawful: +2d6 vs. Chaos </li>
+        <li>Spell Process: Dispel Magic on Hit (Will save)</li>
+      </ul>
+      <p>They are currently &quot;good&quot; but not &quot;lawful&quot;, which makes little sense. In
+        addition, many people are used to the Dispel Magic on Hit ability from BG2.
+        Basically, no one is arguing that Cera Suma is too powerful in this games&mdash;it
+        needs all the help it can get, especially considering the difficulty in
+        obtaining it. </p>
+      <p><strong> Two-Handed Greatsword Holy Avenger</strong></p>
+      <p> This turns all Holy Avengers in the game into Two-Handed Greatswords. This
+        changes the amount of damage dealt, the range, the number of hands
+        required, and the feat used (it will use the greatsword feat). Everything
+        is else unchanged. You may use this component and the Imp Holy Avenger one
+        together if you like, or you may use just one of them. </p>
+      <p>This is useful if your paladin is going to use only Cera Sumat as a weapon,
+        because 1d8+5+STR just isn't enough to hurt powerful enemies.
+        2d6+5+(STR*1.5) is, however. </p>
+      <p>On the other hand, this means that you can't dual-wield Cera Sumat and the
+        Golden Heart, or Cera Sumat and the Stunning Star of Speed, or Cera Sumat
+        and Cera Sumat. </p>
+      <p><strong> No Fists for Iron Body</strong><br />
+        <em>Compatibility: Skipped if IWD2EE's 'Spell Revisions' is installed, as it already makes this change</em></p>
+      <p> The Iron Body spell is lovely, but by that point in the game you probably
+        have much better weapons than 1d6 fists. Casting iron body <em>forces</em> you to
+        use those weak fists. This component changes the iron body spell so that no
+        fists are generated. This means that you have to come up with your own
+        weapons... but if you have some, you can use them. </p>
+      <p><strong> Deep Gnome Starting XP</strong><br />
+        <em>Compatibility: Skipped if IWD2EE's 'Revise Racial Level Adjustment' is installed, as it sets all starting XP to zero</em></p>
+      <p> All races start 1000 XP from level 2... except deep gnomes, who for no
+        apparent reason start 5000 XP from level 2. This component makes deep
+        gnomes start 1000 XP away from level 2, just like everyone else. </p>
+      <p><strong> Improved Moonblades</strong> <em><br />
+        Compatibility: Skipped if IWD2EE's 'Item Revisions' is installed, as it offers alternative functionality</em></p>
+      <p> This changes Emma's Moonblade and the Moonblade from the Moonblade spell to
+        count as small blades so that (1) you can use Expertise with them and (2)
+        you can dual-wield them more easily. This only makes sense: Moonblades are
+        insubstantial magical constructs that have no moment of inertia: you should
+        be able to flick them around very quickly. This also changes Emma's
+        Moonblade so that it has the same stats as the Moonblade Spell Moonblade
+        (e.g., no to-hit bonus, more damage, scrambles magic). </p>
+      <p><strong> Improved Monk Fists</strong><br />
+        <em>Compatibility: Skipped if IWD2EE's 'Class Revisions' is installed, as it already makes this change</em></p>
+      <p> This makes monk fists count as &quot;small blades&quot; so that you can use Weapon
+        Finesse (feat that allows you to use DEX for to-hit bonuses instead of STR)
+        with them. Fists are even smaller than daggers&mdash;this only makes sense. In
+        addition, I believe you can do this anyway in 3E (although I think it takes
+        a separate feat). </p>
+      <p><strong> Collector's Edition Bonus Items</strong></p>
+      <p> This component gives you the extra items from the Collector's Edition bonus
+        CD. Here's the original README: </p>
+      <div class="kit_description">
+        <p> Welcome to the Icewind Dale II Bonus Disc. This disc contains eleven
+          unique items that have never been seen before in the Forgotten Realms.
+          They also have Heart of Fury mode equivalents so technically there are
+          twenty-one unique items. Below is where you can find them in the game.
+          If you want to know where they are, read on. If you would rather try
+          and find them yourself, please stop now. We really hope you enjoy the
+          bonus items and your adventures in Icewind Dale II. Good hunting.</p>
+      </div>
+      <p> To find the new Tower Store, head to the town of Kuldahar. There you will
+        see a tower in the northwest corner of the map. After entering the
+        tower, you will go into dialogue with an NPC. After you finish this
+        dialogue, go to the air elemental in  the western part of the room.
+        He has all of the unique items for sale, except for one...(You may want to free him instead. The items will still
+        be available, but you get XP.)</p>
+      <p> The Avarine Decanter
+        In the Wandering Village, you will meet up with an NPC named Nym. Nym
+        has the Avarine Decanter for sale in his store. It is a very unique
+        item, but it is up to you to decipher its mysteries. </p>
+      <p><strong> No Alignment Class Restrictions </strong><em><br />
+        Compatibility: Skipped if IWD2EE's 'Looser Alignment Restrictions' is installed, as it offers alternative functionality</em></p>
+      <p> This removes all alignment class restrictions. So you can make a lawful
+        good bard (and later multi-class to a paladin) if you want to, etc. </p>
+      <p><strong> Magic Weapon Finesse</strong></p>
+      <p> This changes weightless magical weapons (black blade of disaster, lich
+        touch, ghoul touch, harm, destruction, mordy's sword) to qualify as small
+        blades so that you can use Weapon Finesse with them. </p>
+      <p><strong> Always Get Some XP Per Kill</strong><em><br />
+        Compatibility: Skipped if  IWD2EE's 'Enemies give the same amount of experience regardless of the party's level' is installed, as it offers alternative functionality</em></p>
+      <p> This changes the XP tables so that you will always get some (small) amount
+        of XP for killing a monster, no matter what your level. If the monster used
+        to give 50 XP when killed by a level X party and 0 when killed by a level
+        X+1 party, it now gives 25 when killed by a level X+1 or greater party.
+        This is useful if you are playing a solo game: you will rapidly reach some
+        medium level (10, say) while still facing the goblin fortress, meaning you
+        have to plow through a bunch of enemies all of whom get you nothing, which
+        can get quite boring. </p>
+      <p><strong> Some Heart of Fury Items in Normal Mode</strong></p>
+      <p> Heart of Fury mode replaces many magical items in the game with stronger
+        counterparts. For example, a +1 Sword that does +1d6 cold damage might
+        instead become a +3 Sword that does +2d6 cold damage. This component causes
+        most Heart of Fury items to appear in Normal Mode games. Thus you will find
+        the Golden Heart of &lt;CHARNAME&gt; instead of the Heart of &lt;CHARNAME&gt; in the
+        Gallaway Trading Post. This is useful if you want to see some of these
+        items but can't stand the stupid decisions they made while balancing (sic)
+        Heart of Fury mode.</p>
+      <p>I'm sorry, but I cannot give you a list of exactly which HoF items will
+        appear in normal mode when you install this. </p>
+      <p><strong> Stronger Bastard Swords</strong><em><br />
+        Compatibility: Skipped if IWD2EE's 'Item Revisions' is installed, as it offers alternative functionality</em></p>
+      <p> Bastard Swords are basically useless in IWD2. Not only do you have to take
+        a special feat to use them, but they are all bad. Half of the cursed
+        weapons in the game are bastard swords, and around 25% of all bastard
+        swords are cursed. What were they thinking? All of the weapon types are
+        supposed to be equally represented. This tries to balance the scales (or
+        perhaps tip them slightly) in the opposite direction by boosting the power
+        of bastard swords. </p>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Old</th>
+          <th>New</th>
+          <th>Found</th>
+        </tr>
+        <tr>
+          <td><strong>Bastard's Son</strong></td>
+          <td>vanilla +2 weapon</td>
+          <td>+2 weapon, Executioner's Eyes while equipped</td>
+          <td>Carried By: Talisman Warrior (Chp 4.1-Nrm)</td>
+        </tr>
+        <tr>
+          <td><strong>Know Thy Family</strong></td>
+          <td>vanilla +3 weapon</td>
+          <td>+3 weapon, Executioner's Eyes while equipped</td>
+          <td>Carried By: Talisman Warrior (Chp 4.1-HoF)</td>
+        </tr>
+        <tr>
+          <td><strong>Rage of Chaos</strong></td>
+          <td>cursed berserking lawful +3</td>
+          <td>+3 lawful, Chaotic Commands, casts Chaos on target</td>
+          <td>Found In: AR6301-Nrm</td>
+        </tr>
+        <tr>
+          <td><strong>Order's Nemesis</strong></td>
+          <td>cursed berserking lawful spellward +5 </td>
+          <td>+5 lawful, Chaotic Commands, casts Chaos on target,
+            spellward</td>
+          <td>AR6301-HoF</td>
+        </tr>
+        <tr>
+          <td><strong>Wroth</strong></td>
+          <td>+1 weapon, cursed, 25% chance of Blood Rage when wounded</td>
+          <td>+1 weapon, positive benefits of Animal Rage while equipped</td>
+          <td>Carried By: Barbarian Warrior (Chp 5.0-Nrm)</td>
+        </tr>
+        <tr>
+          <td><strong>Bloody Wroth</strong></td>
+          <td>+3 weapon, cursed, 66% chance of Blood Rage when wounded</td>
+          <td>+3 weapon, double positive benefits of Animal Rage</td>
+          <td>Carried By: Barbarian Warrior (Chp 5.0-HoF)</td>
+        </tr>
+        <tr>
+          <td><strong>Icy Bastard Sword</strong></td>
+          <td>+1 weapon, +1d6 cold</td>
+          <td>+1 weapon, sure strike, +5d6 cold, 15 cold res</td>
+          <td>Found In: AR6101 ; Random Drop: HoF, Nrm</td>
+        </tr>
+        <tr>
+          <td><strong>Bastard Sword of Frost</strong></td>
+          <td> +1 weapon, +1d6 cold </td>
+          <td>+1 weapon, sure strike, +5d6 cold, 15 cold res</td>
+          <td> Random Drop: All Games, HoF, Nrm</td>
+        </tr>
+        <tr>
+          <td><strong>Static Bastard Sword</strong></td>
+          <td> +0 weapon, 50% chance of +1d6 electricity </td>
+          <td> +0 weapon, sure striking, +5d6 elec, 15 elec res</td>
+          <td> Random Drop: HoF, Nrm </td>
+        </tr>
+        <tr>
+          <td><strong>Bastard Sword of Heroism </strong></td>
+          <td> 1d10+3, sure strike, keen, +3d6 slash </td>
+          <td> 4d10+3, sure strike, keen </td>
+          <td> Random Drop: All Games, HoF, Nrm</td>
+        </tr>
+        <tr>
+          <td><strong>Cold Fire</strong></td>
+          <td> +3 weapon, +1d6 cold, +1d6 fire </td>
+          <td> +3 weapon, +3d6 cold, +3d6 fire, 7 cold res, 7 fire res</td>
+          <td> Carried By: Orog General (Chp 6.7), Wanmok (Chp 6.2), Wanmok (Chp 6.3)
+            Random Drop: All Games, HoF, Nrm</td>
+        </tr>
+        <tr>
+          <td><strong>Black Adder</strong></td>
+          <td> +2 weapon, keen, venom </td>
+          <td> +2 weapon, keen, venom, 33% of 1 Vipergout on hit</td>
+          <td> Found In: AR6051
+            Random Drop: All Games, HoF, Nrm</td>
+        </tr>
+        <tr>
+          <td><strong>Fang</strong></td>
+          <td> +0 weapon, 25% of 1d3 acid damage </td>
+          <td> +0 weapon, sure strike, +5d6 acid, 15 acid res</td>
+          <td>Previously found nowhere, now in Gallaway Trading Post</td>
+        </tr>
+        <tr>
+          <td><strong>Undead Slayer</strong></td>
+          <td> +1 weapon, +2d6+2 vs. Undead </td>
+          <td> +1 weapon, sure strike, Disrupts Undead (no save)</td>
+          <td> Random Drop: HoF, Nrm</td>
+        </tr>
+      </table>
+      <p> <strong>All Items Identified</strong></p>
+      <p> This component causes all items to be auto-identified (lore requirement:
+        0). Believe it or not, more than one person asked for this component. </p>
+      <p><strong> Non-Linear Teleporting</strong></p>
+      <p> This attempts to make IWD2 less linear (and thus increase its replay value)
+        by allowing you to teleport to more or less any location conveniently. </p>
+      <p>Even if you don't want to do things out of order, it can speed up a number
+        of fedex quests. </p>
+      <p>While AI is enabled (the guy in the lower right of the GUI has glowing
+        eyes), select a single character and press T. You will be given a dialogue
+        listing possible places to go. Pick one. Note that teleporting a level 1
+        party to Kuldahar (or whatnot) is probably a recipe for disaster. </p>
+      <p><strong> Armor and Shields Provide Damage Resistance</strong><em><br />
+        Compatibility: Skipped if IWD2EE's 'Minor Damage Resistance for Armor and Shields' is installed, as it offers alternative functionality</em></p>
+      <p> This changes the game so that a piece of equipment that provides an armor
+        bonus of +X also provides +X damage resistance. Why? This is for those of
+        you who dislike 3E's continual use of &quot;armor class&quot; despite the fact that
+        plate mail makes you (as a unit) easier to hit but harder to damage. This
+        is also for those who are used to more &quot;complicated&quot; or &quot;realistic&quot; combat
+        systems that make a more concerted distinction between dodging and damage
+        resistance. </p>
+      <p>However, the real reasons for this is are as follows: </p>
+      <ol>
+        <li> Heavy armor still stinks in IWD2 and there is no real reason to use
+          it. It is almost always better to have an 18 DEX and Studded Leather than
+          to go out for Chain Mail or Splint Mail. In addition, most of the magical
+          armor in the game is leather. This provides an incentive to find and use
+          heavy armor. </li>
+        <li> BAB goes up as you gain levels but AC does not. A random monster
+          (like a Yuan-Ti Abomination in Chult) might be a 13th level fighter with
+          14 STR (say). As a result, it can hit an AC of 34 without rolling a
+          natural twenty. When was the last time you had an AC of 34? Didn't think
+          so. Basically, everyone hits you all the time. This makes the game
+          degenerate: mirror image, blur and blink become all-powerful, as do
+          stoneskin (or damage resistance in general) and things that take damage
+          for you (summoned monsters). The replay value of IWD2 is severely
+          lessened by the fact that combat is so boring in that regard. </li>
+      </ol>
+      <p>Note that this change affects both your party <em>and</em> all enemies. In
+        addition, enemies that have &quot;innate&quot; armor bonuses (e.g., the Guardian
+        Dragon has an innate AC of 35) have that transformed into innate damage
+        resistance (e.g., the Guardian will now have 25 damage res). Again, I think
+        this only makes sense: a dragon is easy to hit but hard to hurt. </p>
+      <p><strong> Include Forgotten Armor and Shields</strong><em><br />
+        Compatibility:  This component will be substantially reduced in scope  if IWD2EE's 'Item Revisions' is installed, since it restores all but five of these items</em></p>
+      <p> This component takes a number of items are are defined in the official game
+        resource files but do not actually appear anywhere in the game and puts
+        them into the game. I am fairly certain that there is no other way to
+        obtain these items. IWD2 has long been criticized for its vast lack of
+        armor and shields. </p>
+      <p>My placement was somewhat arbitrary with an emphasis toward making the
+        armor available early. You may have to impress the bearer in order to get
+        some of these items. </p>
+      <ul>
+        <li>The Weapon Instructor on the Palisade has:
+          Cliffs of Targos/Cliffs over Maer Dualdon</li>
+        <li>Shawford has:
+          Sad Giant's Cap/Sad Gohji's Cap,
+          Mail of Life</li>
+        <li>Jemel (in the Gallaway Store) has:
+          Knucklehead/Apsel's Rolly-Polly Knuckledheaded Shield</li>
+        <li>Guthewulfe (in the Salty Dog) has:
+          Tower Shield of Spell Resistance</li>
+        <li>Tahvo the Huntmaster (Wandering Village) has:
+          Umber Hulk Plate,
+          Black Dragon Scale </li>
+        <li>Deidre Gallaway has:
+          Owl's Feather/Hawk's Feather</li>
+        <li>Ennelia has:
+          Interloper/Silent Interloper</li>
+        <li>Oswald Fiddlebender has:
+          Baleful Mail,
+          Elven Chainmail of the Hand +3,
+          Ogien's Scale,
+          Mourner's Armor,
+          Glacial Resilience/Glacial Storm,
+          Sanctity/Sanctity of Being</li>
+      </ul>
+      <p><strong> Additional Druid Spells</strong></p>
+      <p> Druids are supposed to be neat and powerful in 3E but they end up being
+        very weak in IWD2 compared to cleric and sorcerers. Why? Clerics get domain
+        spells, special abilities and spontaneous casting. Druid shapeshifting just
+        does not make up for it, especially since you cannot cast spells <em>or</em> use
+        items while you are shapeshifted. Druids are also weak compared to
+        Sorcerers&mdash;Sorcs are just as good on offense (acid storm, wilting,
+        mordy's sword) but much better on defense (stoneskin, aegis, etc.). </p>
+      <p>This component takes a number of &quot;natural&quot; spells that should (in my
+        opinion) thematically be available to druids and makes them available to
+        druids. The spells are: </p>
+      <ul>
+        <li>magic stone, stoneskin&mdash;come on: druids, stonehenge, nature. Plus, druids
+          are supposed to be better fighters than most clerics. </li>
+        <li> produce fire&mdash;this spell appears in the game and is made for druids but
+          was left out of the spell tables for some reason </li>
+        <li> eagle's splendor, bull's strength, cat's grace, trollish fortitude&mdash;
+          these &quot;give me animal traits&quot; spells are clearly in the druid's theme
+          (c.f. animal rage, which they already have)</li>
+        <li> spider spawn, wyvern call, vipergout&mdash;these are animal summons, druids
+          should get them</li>
+        <li> web&mdash;tortoise shell but not spider web? come on!</li>
+        <li> ice dagger, ice lance, cone of cold&mdash;frost fingers but not these? druids
+          are supposed to have powerful offensive spells </li>
+        <li> ball lightning, chain lightning&mdash;call lightning and static charge but not
+          these? druids are supposed to have offensive elemental powers</li>
+        <li> burning hands&mdash;frost fingers but not burning hands? they have flame blade
+          and ice blade, why skip this pairing? </li>
+        <li> shroud of flame, fiery cloud, sunfire&mdash;druids are supposed to have
+          elemental powers, yada yada</li>
+        <li> vitriolic sphere, acid fog, acid storm&mdash;again, elemental powers. Plus,
+          &quot;fog&quot; and &quot;storm&quot; are even nature related (cf. &quot;rainstorm&quot;) </li>
+        <li> pro elec, pro acid&mdash;druids get pro-fire, why why these protection spells? </li>
+        <li> pro evil, magic circle against evil&mdash;high level druid summoning spells (summon nature's companion
+          IX, summon elemental legion) bring in elementals that attack the party
+          because DRUIDS CANNOT CAST PRO-EVIL! Hello: design flaw. </li>
+      </ul>
+      <p><strong> Alternate Shapeshifting</strong><br />
+        <em>Compatibility: Skipped if IWD2EE's 'Class Revisions' is installed, as it revamps these abilities in a different way</em></p>
+      <p> Shapeshifting in IWD2 has a number of crippling disadvantages:</p>
+      <ul>
+        <li> While shapeshifted you cannot cast spells <em>OR</em> use quickslot items. No
+          drinking healing potions, etc. </li>
+        <li> Your physical resistances are <em>SET</em> to that of the shape. So if you are
+          wearing some item that gives you cold resistance or physical
+          resistance, expect to lose that benefit when you shapeshift. </li>
+        <li> You must use dippy shapeshift weapons which are uniformly pretty poor
+          compared to the stuff that you can find in IWD2. </li>
+        <li> The forms that you can become just are not strong enough to justify
+          using the ability. </li>
+        <li> Minor point, but spells like &quot;hold person&quot; still work on you if you
+          turn into a massive bear. Enemies should have to use &quot;hold monster&quot; or
+          &quot;hold animal&quot; or somesuch. </li>
+        <li> There is a massive in-game bug that causes you to not to get access to
+          new wild shapes you really should have until you gain a level and your
+          number of wild shapes / day goes up by one. I don't know how they
+          missed it in playtesting. </li>
+      </ul>
+      <p>This mod component attempts to make shapeshifting actually useful by
+        dramatically upping the power of the wild shapes. You still can't use items
+        or cast spells, but the forms are much stronger and come with better arms
+        and armor. Basically, I went and picked a number of really cool things that
+        you might actually want to turn into (e.g., remorhaz, will o' wisp,
+        half-dragon). In addition, I fixed (mostly) the bug that causes you not to
+        have access to wild shapes you should get. That bug still afflicts
+        Feat-based shapes, but that's it. Here's the updated part of the
+        description of the Druid class:</p>
+      <ul>
+        <li> 5th level: Druids gain the Wild Shape ability to transform into powerful
+          creatures. While transformed the druid cannot cast spells or use quick
+          slot items (like healing potions). While transformed the druid's normal
+          STR, CON and DEX are replaced by the physical attributes of the shape.
+          Transforming also heals some damage. When a druid first learns a new Wild
+          Shape, that shape can be used once per day. Each additional level gained
+          allows the druid to use that shape an additional time per day (to a
+          maximum of 9 times per day). </li>
+        <li> 5th level: Wild Shape - Verbeeg. Verbeeg are strong but slow giantkin
+          that attack with massive spears. </li>
+        <li> 5th level (or above): At this point the druid may choose Wild Shape -
+          Will o' Wisp as a Feat. Wisps are dexterous but fragile. They are adept
+          at evading blows in combat and are almost impossible to damage with
+          elemental magics. Wisps have a weak electrical attack. The druid will not
+          be able to transform into Feat-based shapes as often, and all Feat-based
+          shapes share the same pool of transformations per day. (Because of bugs
+          in the original game, even if you choose a Wild Shape Feat you may not be
+          able to use it until you gain a few more levels. Sorry.)</li>
+        <li> 5th level (or above): At this point the druid may choose Wild Shape -
+          Yeti as a Feat. Yetis are quite strong and their thick fur serves to keep
+          out the cold and ward off blows. Their powerful paws are rancid and
+          venomous. Yetis are vulnerable to fire. </li>
+        <li> 7th level: Wild Shape - Fomorian Giant. Fomorian Giants are stronger and
+          tougher than the Verbeeg. They attack with massive fists and can stun
+          their foes with the force of their blows. </li>
+        <li> 8th level: Immunity to Poison. The druid becomes immune to all forms of
+          poison.</li>
+        <li> 9th level: Wild Shape - Remorhaz. Remorhaz are massive fiery lizards.
+          They are exceptionally strong and their chitinous shells deal bludgeoning
+          damage and burn their foes. Remorhaz are resistant to heat. </li>
+        <li> 10th level (or above): At this point the druid may choose Wild Shape -
+          Treant as a Feat. Treants are very strong and their wooden bodies are
+          almost impossible to damage. Treant branches behave like massive clubs
+          while roots and shoots entangle unwary foes and hold them fast. Treants
+          are especially vulnerable to fire. (Again, game bugs mean that even if
+          you pick this Feat you may not be able to use it until, for example,
+          level 14.)</li>
+        <li> 11th level: Wild Shape - Wyvern. Wyverns are lizards that attack with
+          venomous and acidic stingers. Wyverns are not as strong as previous Wild
+          Shapes but they are heavily armored and resistant to magical spells. </li>
+        <li> 13th level: Wild Shape - White Half-Dragon. Half-Dragons are tremendously
+          strong, fairly quick and quite tough. They are also resistant to magical
+          spells. White Half-Dragons are immune to cold and attack with chilling
+          blades. </li>
+        <li> 14th level: Timeless Body. The druid is immune to the effects of fatigue.</li>
+        <li> 15th level: Wild Shape - Red Half-Dragon. Each Half-Dragon form is
+          stronger, faster, tougher and more heavily armored than the last. Red
+          Half-Dragons are immune to flames and attack with fiery blades.</li>
+        <li> 17th level: Wild Shape - Blue Half-Dragon. Blue Half-Dragons are immune
+          to electricity and attack with shocking blades. </li>
+        <li> 19th level: Wild Shape - Black Half-Dragon. Black Half-Dragons are immune
+          to acid and attack with corrosive blades. </li>
+        <li> 21st level: Wild Shape - Elemental Half-Dragon. Elemental Half-Dragons
+          are immune to fire, cold, electricity and acid. Their terrible swift
+          swords combine all the offensive powers of all previous half-dragon Wild
+          Shapes. </li>
+      </ul>
+      <p>You can install this component &quot;in the middle&quot; of a game where you already
+        have a normal druid. The wild shape powers will become what is listed here.
+        However, your &quot;shapeshift / day&quot; count may be a bit off and you may find
+        some shapeshifts listed &quot;twice&quot; in your special ability bar. Nothing I can
+        do, sorry. </p>
+      <p><strong> Skip Battle Square</strong></p>
+      <p> This component gives you the option of automatically completing all
+        (3+4+5+6+7)*10 = 250 battles in the Battle Square &quot;challenge&quot; in the
+        Ice Temple. You may now talk to the Ice Golem champion that controls the
+        battle square and pick an option to complete them all in one fell swoop.
+        You will be given all of the rewards (mostly a bunch of ammo, but some of
+        the rewards cannot be obtained any other way) and all of the game variables
+        will be updated. The normal Battle Square rewards are somewhat random
+        (e.g., you might get Bolts +1 or Arrows +1). If you use the Skip component
+        you will always get a &quot;well-balanced&quot; reward that I picked using the game's
+        algorithm (i.e., it is possible to get exactly this reward by just playing
+        the game normally). </p>
+      <p>Installing this component will not automatically skip the Battle Square in
+        every game&mdash;you still have to talk to the Golem. So if you decide that
+        you want to complete the BS normally, just don't talk to him. </p>
+      <p><strong>Faster Oswald</strong></p>
+      <p>This component eliminates the timers for Oswald's forging so that the items become available immediately. <em>From Cam: This was present and operating in v15, but wasn't in the documentation anywhere. </em></p>
+      <p><strong> Randomized Treasure</strong></p>
+      <p><em>From Cam: This component accomplishes its task by swapping the </em>contents<em> of multiple item files. As such, other mods looking to modify specific items will apply modifications to the wrong file contents&mdash;this could mean either that the mod doesn't make its needed changes, or that the mod could fail to install. As such, this component, specifically, should be installed as late as possible in your mod order. Even with that, there are still many potential compatibility issues and some in-game wonk (see below). </em></p>
+      <p> IWD2 nominally has randomized treasure drops... but if you've played the
+        game a few times you've probably noticed that there really isn't all that
+        much variation. This component swaps around items that were given similar
+        values by the game designers (e.g., all items that cost 50 gold might be
+        randomly permuted). This includes items that you can buy in stores but not
+        (hopefully!) special items like keys or whatnot. Items that cannot be
+        stacked will only be swapped with other items that cannot be stacked (e.g.,
+        the staff of corrosion and a sling of resistance might be swapped). Items
+        that can be stacked will only be swapped with other items that can be
+        stacked (e.g., arrows of lesser dispelling might get swapped with scrolls
+        of aegis or sunstone gems). </p>
+      <p>Note that this make make some bits of the game look a little strange (e.g., a
+        dwarf that claims to give you an axe may in fact give you a longbow) but it
+        should at least add some variety. </p>
+      <p>Note that installing this component will swap around the equipment already
+        carried by your parties, which might yield some &quot;interesting&quot; results. I
+        may think of a better way to do this later. </p>
+      <p>If you don't like the default random distribution, you can change the
+        RANDOM_SEED in iwd2-ease/lib/rndom.tpa and re-install this component. </p>
+      <p>WARNING: Remove all items from all character before UNINSTALLING this
+        component because when you uninstall it the items will revert to their
+        original forms and you may end up with strange combinations (like wearing a
+        ring in your bow slot or something). </p>
+    </div>
+    <div class="section"> </div>
+    <div class="ribbon_rectangle_h2"><a id="Contact" name="Contact"></a>
+      <h2>Contact Information</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>The Icewind Dale II Ease of Use Mod is the hard work of Westley Weimer and is currently being maintained by CamDawg. For issues, suggestions and
+        general feedback, the <a href="https://forums.pocketplane.net/index.php?board=43.0">The Icewind Dale II Ease of Use Mod
+        forums</a> are the best resource. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Thanks" name="Thanks"></a>
+      <h2>Thanks and Acknowledgments</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>From Wes: Special thanks to Bhasbuto of Clan DLAN, www.clandlan.cjb.net, for the
+        Spanish translation. </p>
+      <p>From Cam: When pulling a mod forward two decades, it really drives home how much WeiDU and the other modding tools have advanced. As such I'd really like to thank the few, but exceptionally talented, tool makers in the community. That starts with Wes himself, for WeiDU, continues for the_bigg and Wisp who have maintained it since, and folks like Avenger (DLTCEP), argent77 (Near Infinity, from Jon Olav Hauglid and FredSRichardson). Tools only get better as we learn more, for which the community has always relied on the IESDP, so thanks to igi and lynx and all of its contributors. </p>
+      <p><strong>Tools Used in Creation</strong></p>
+      <ul>
+        <li><a href="http://www.weidu.org/">WeiDU</a> by
+          Wes Weimer, the bigg, and Wisp</li>
+        <li> <a href="https://github.com/Argent77/NearInfinity">Near Infinity</a> by Jon Olav Hauglid, FredSRichardson, and argent77</li>
+        <li><a href="https://notepad-plus-plus.org/">Notepad++</a>, by the Notepad++ team</li>
+        <li><a href="https://www.gibberlings3.net/mods/tools/weidu/">WeiDU Notepad++
+          Highlighters</a> by cmorgan, updated by argent77 </li>
+        <li> <a href="http://www.contexteditor.org/">ConTEXT Text Editor</a> by Eden Kirin</li>
+        <li> <a href="https://gibberlings3.github.io/iesdp/"> IESDP</a> maintained
+          by igi and lynx</li>
+        <li> <a href="https://www.gibberlings3.net/mods/tools/weidu/">WeiDU ConTEXT
+          Highlighters </a> by Idobek, updated by cmorgan </li>
+      </ul>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Credits" name="Credits"></a>
+      <h2>Credits and Copyright Information</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p> The modding community for the Infinity Engine has been going strong for
+        more than two decades now, and is the culmination of thousands of unpaid modding
+        hours by fellow fans of the game. Modders produce their best work and players
+        get the best, well-supported mods when we all work together. </p>
+      <p> There are two big ways to upset this harmony. One is to claim someone else's
+        work as your own. The second is to host and redistribute a mod without permission
+        from the author(s). </p>
+      <p> Be kind to your fellow players and modders. Don't do either. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="History" name="History"></a>
+      <h2>Version History</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p><strong>Version 16 - November 9, 2023</strong></p>
+      <ul>
+        <li>Removed backup folder contents and changed backup location</li>
+        <li><strong>Bugfixes </strong>has been deprecated. The fixes are already in IWD2EE and/or IWD2 Fixpack, and a dedicated project is a better home for fixes than a lone component in an otherwise late-install mod. </li>
+        <li><strong> Infinite Stacking</strong> now searches dynamically for stackable items so that it will cover items added by mods</li>
+        <li>The following components were overwriting files and now patch them dynamically instead: <strong> Non-Combat War Chant of the Sith</strong>, <strong> Improved Holy Avenger</strong>, <strong> No-Fists for Iron Body</strong>, <strong> Deep Gnome Starting XP</strong>, <strong> Improved Moonblades</strong>, <strong> No Alignment Class Restrictions,  Additional Druid Spells</strong></li>
+        <li>Prior versions also overwrote the entire description of a spell or item when updating. Descriptions are instead changed dynamically for: <strong> Improved Holy Avenger</strong>, <strong> Improved Moonblades</strong>, <strong>Include Forgotten Armor and Shields</strong></li>
+        <li><strong> Two-Handed Greatsword Holy Avenger</strong> was targeting static offsets, which could result in the patch not working or actively breaking something else. The description now updates to reflect it's a two-handed weapon. </li>
+        <li>Changes to <strong> Stronger Bastard Swords</strong>
+          <ul>
+            <li>Fang is now inserted into the Gallaway Trading Depot store via patch instead of overwrite, allowing it to be displayed in the store in a more natural place instead of at the end </li>
+            <li><span data-code-marker="+">Order's Nemesis and Rage of Chaos</span> will copy their effects (Chaos on-hit, Chaotic Commands on-equip) directly from the spells at installation, meaning they'll reflect any changes made by other mods to these spells</li>
+          </ul>
+        </li>
+        <ul>
+          <li>Because these items are very different from the items they're replacing, this is one place where the mod still overwrites items</li>
+          <li>Several minor bugs in the items were fixed</li>
+        </ul>
+        <li><strong> Non-Linear Teleporting</strong> will no longer overwrite changes made by other mods to the generic, multiplayer dialogue file</li>
+        <li><strong> Armor and Shields Provide Damage Resistance</strong> changes:
+          <ul>
+            <li>Now dynamically searches and patches items instead of the ~140 or so file overwrites it did before</li>
+            <li>The patch to convert creature defense to resistances was not working, as it was updating the wrong offsets</li>
+            <li>This component now updates an item's description to indicate the physical damage resistance of the item as a paenthetical next to the shield/armor bonus. </li>
+          </ul>
+        </li>
+        <li><strong> Include Forgotten Armor and Shields</strong> changes:
+          <ul>
+            <li>The dialogue changes here could overwrite large portions of dialogue files. Now that we have the tools these replacements are instead supplanted by smaller, compatibility patches that accomplish the same goals</li>
+            <li>Text patches were being used to update store inventories, which could result in the wrong (or no) change being made. It also eliminated the old item; the restorations are now simply added alongside the existing inventory</li>
+            <li>Oswald's new store was corrupt (bad offsets) and was not available in all of the right spots in Oswald's dialogue</li>
+            <li>Ogien's Scale was not actually restored</li>
+            <li>Zuvembie is no longer available from Oswald, as the item is indeed available in the game</li>
+          </ul>
+        </li>
+        <li><strong> Additional Druid Spells</strong> changes:
+          <ul>
+            <li>From Wes' to-do list, Magic Circle Against Evil has been added</li>
+            <li>Scrolls are now updated to be usable by druids</li>
+            <li>Spell descriptions are updated to reflect the druid level</li>
+            <li>No longer overwrites the master spell list</li>
+          </ul>
+        </li>
+        <li><strong> Alternate Shapeshifting</strong> changes
+          <ul>
+            <li>Several of the transformations were still playing sounds from the old transformation, e.g. you'd still get a wolf howl when changing into a <span data-code-marker="+">Fomorian Giant</span></li>
+            <li>No longer overwrites every shapeshifting spell and druid ability table</li>
+            <li>Names of all but one of the Half-Dragon forms were missing</li>
+            <li>When adding to the innate spell list, it was assuming a fixed length and could therefore cause duplicate or missing entries on the list</li>
+          </ul>
+        </li>
+        <li><strong> Skip Battle Square</strong> now patches the dialogue in a much more mod-friendly fashion </li>
+        <li><strong>Faster Oswald</strong> was recoded in such a way so that variable timers can be swiftly implemented. E.g. if there's player interest.  timers can be reduced to 50% (or any other value) instead of zero</li>
+        <li>Other minor changes and re-organizations to help with future maintenance</li>
+        <li>Several typos corrected</li>
+      </ul>
+      <p><strong>Version 15</strong></p>
+      <ul>
+        <li> Mail of Life no longer prevents you from casting spells, etc. This
+          was a bug in IWD2, not in the Ease Mod, but we'll fix it anyway
+          since so many people asked about it. :-) </li>
+      </ul>
+      <p><strong>Version 14</strong></p>
+      <ul>
+        <li> Spanish Translation by Bhasbuto of Clan DLAN, www.clandlan.cjb.net. </li>
+      </ul>
+      <p><strong>Version 13</strong></p>
+      <ul>
+        <li> David Adolphus bugfixes.</li>
+        <li> Infinite stacking now includes scrolls. </li>
+        <li> Mandrake Root is no longer random treasure. </li>
+      </ul>
+      <p><strong>Version 12</strong></p>
+      <ul>
+        <li> New version of WeiDU, etc. </li>
+      </ul>
+      <p><strong>Version 11</strong></p>
+      <ul>
+        <li> Random Tres: More sensible decisions, better Targos compatibility.</li>
+        <li> Bastard: Fang now costs 5x as much. </li>
+      </ul>
+      <p><strong>Version 10</strong></p>
+      <ul>
+        <li> Described the alternate shapeshifting component.</li>
+        <li> Damage Resistance from armor/shields now applies to monsters as
+          well.</li>
+        <li> Bugfix: fixed two spelling errors in the HoF random equipment chart.</li>
+        <li> Added Randomized Treasure component. </li>
+      </ul>
+      <p><strong>Version 9</strong></p>
+      <ul>
+        <li> Added Skip Battle Square component. </li>
+        <li> Removed the Abishia/Cornugan hide armor from the forgotten
+          armor component. You can get it from the Battle Square. </li>
+        <li> No more infinite stacking for returning frost darts, etc. </li>
+        <li> Fixed a &quot;dragon's eye&quot; bug in the non-linear teleporter. Thanks,
+          Michael Coursey. </li>
+        <li> Added the alternate shapeshifting component. Description pending. </li>
+      </ul>
+      <p><strong>Version 8</strong></p>
+      <ul>
+        <li> Fixed a bug where you could not install the Forgotten Armor
+          component unless you had also downloaded the Targos mod. Sigh.</li>
+      </ul>
+      <p><strong>Version 7</strong></p>
+      <ul>
+        <li> Added Forgotten Armor component. </li>
+        <li> Added Additional Druid Spells component.</li>
+      </ul>
+      <p><strong>Version 6</strong></p>
+      <ul>
+        <li> Improved Holy Avenger now changes description. </li>
+        <li> Added Non-Linear Teleporting component. </li>
+        <li> Added Armor Damage Res component. </li>
+      </ul>
+      <p><strong>Version 5</strong></p>
+      <ul>
+        <li> Added &quot;All Items Identified&quot;</li>
+      </ul>
+      <p><strong>Version 4</strong></p>
+      <ul>
+        <li> Added &quot;HoF Items In Normal Mode&quot;</li>
+        <li> Added &quot;Stronger Bastard Swords&quot; </li>
+        <li> Updated for 2.01 Patch compatibility. </li>
+      </ul>
+      <p><strong>Version 3</strong></p>
+      <ul>
+        <li> Added Phaen Staff bugfix. Stun Flail, Stunning Arrows and
+          Pudu's Blight stunning chance fixes. </li>
+        <li> Added the &quot;magic weapon finesse&quot; and &quot;some xp per kill&quot;
+          components. </li>
+      </ul>
+      <p><strong>Version 2</strong></p>
+      <ul>
+        <li> Added Improved Monk Fists, Collector's Edition Items, No
+          Alignment Class Restrictions.</li>
+      </ul>
+      <p><strong>Version 1</strong></p>
+      <ul>
+        <li> Initial release. </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
