@@ -99,7 +99,7 @@ div#container {
 }
 
 .ribbon_rectangle, .ribbon_rectangle_h2, .ribbon_rectangle_h3 {
-	background: #4a0000;
+	background: #990000;
 	height: 50px;
 	width: 1054px;
 	position: relative;
@@ -113,13 +113,13 @@ div#container {
 }
 
 .ribbon_rectangle_h2 {
-	background: #222222;
+	background: #4a0000;
 	height: 40px;
 	top: 25px;
 }
 
 .ribbon_rectangle_h3 {
-	background: #990000;
+	background: #222222;
 	height: 40px;
 	top: 25px;
 }
