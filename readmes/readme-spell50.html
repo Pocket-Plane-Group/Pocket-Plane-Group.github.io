@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Spell-50</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="style/weidu_readme_cam_110823.css" type="text/css" />
+<link href="style/weidu_icon.ico" rel="icon" type="image/bmp" />
+</head>
+<body>
+<div id="container">
+  <div class="ribbon_menu">
+    <ul>
+      <li><a href="#Overview">Overview</a></li>
+      <li><a href="#Compatibility">Compatibility</a></li>
+      <li><a href="#Bugs">Bug Reporting</a></li>
+      <li><a href="#Installation">Installation</a></li>
+      <li><a href="#Contents">Contents</a></li>
+      <li><a href="#Contact">Contact</a></li>
+      <li><a href="#Thanks">Thanks</a></li>
+      <li><a href="#Credits">Credits</a></li>
+      <li><a href="#History">History</a></li>
+    </ul>
+    <span><img src="style/weidu_logo.png" width="283" height="54" alt="WeiDU.org logo" /></span> </div>
+  <div class="ribbon_bubble">
+    <div class="ribbon_rectangle">
+      <h1>Spell-50</h1>
+    </div>
+    <div class="ribbon_triangle-l"></div>
+    <div class="ribbon_triangle-r"></div>
+    <div class="section">
+      <p><strong><a href="https://weidu.org/">A WeiDU.org Mod</a><br />
+        Author:</strong> Westley Weimer, currently maintained by CamDawg<br />
+        <strong> On the web: </strong><a href="https://forums.pocketplane.net/index.php?board=43.0">Discussion
+        forum</a></p>
+      <p><strong>Version: v7</strong><br />
+        <strong> Languages:</strong> English<br />
+        <strong>Platforms: </strong>Windows, macOS, and Linux<br />
+        <strong>GitHub: </strong><a href="https://github.com/Pocket-Plane-Group/spell50">Pocket-Plane-Group/spell50</a></p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Overview" name="Overview"></a>
+      <h2>Overview</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>From Westley Weimer's original readme:</p>
+<p class="kit_description">Quite a few priest, druid and mage spells are extended (linearly) in 
+          all respects up to 50th level. For example, a 50th level mage casting 
+          Fireball does 50d6 damage (save for half). A 50th level mage casting Blur 
+          gains the blur benefits for 150 rounds. Note that this applies to you *and* 
+        to your enemies. </p>
+      
+      <p><a href="https://github.com/Pocket-Plane-Group/spell50/master/spell50/docs/readme-spell50.txt">The last readme</a> from Wes (v6) is available in the docs folder. </p>
+      <p>Cam adds:</p>
+      <p class="kit_description">This is not meant to be a balanced mod and, while you may eat a 30d6 Fireball once in a while, for the most part it's going to make the game substantially easier by buffing your spellcasters. It's meant to be fun, even if it can be a bit silly. </p>
+      <p>As of version 7, differing spell caps can be selected so the spells can be extended, or trimmed, to an arbitrary level. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Compatibility" name="Compatibility"></a>
+      <h2>Compatibility</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>As of v7, Spell-50 works on the original and Enhanced Editions of Baldur's Gate, Baldur's Gate II, and Icewind Dale.  It should also work on the conversion 
+        projects BGT, EET, and Tutu.  Spell-50 does include  Icewind Dale spells being added to BG2 games via mods like IWDification or Sword Coast Stratagems. </p>
+      <p>The spells are extended semi-automatically by making certain assumptions, e.g. that Fireball does one die of damage per level, or that Haste lasts three rounds + one 
+        round/level of the caster. As a result, it's not going to work well (or at all) with mods that radically alter the spell system, such as Spell Revisions, but it should work with most other mods. Because it's extending spells programmatically it should pick up and continue changes made by other mods. </p>
+      <p>In terms of install order, Spell-50 is probably better served going earlier in the install order. If you want IWD spells included in your BGEE/oBG2/BG2EE games then Spell-50 
+        needs to follow a mod like IWDification that adds them. Similarly, many kit mods copy their abilities from the original spells, so Spell-50 should try to go ahead of them. Spell-50 
+        should definitely be installed after fixpacks (BG2 Fixpack or EE Fixpack) and prior to large mods such as Tweaks Anthology or SCS.</p>
+      <p>For modders, Spell-50 will generate the file <span class="code">weidu_external/spell50/spell50_cap.tpa</span>, which you can <span class="code">INCLUDE</span> in your mod. The file will set the variable <span class="code">spell50_cap</span> to the spell 
+        cap that Spell-50 used during installation. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Bugs" name="Bugs"></a>
+      <h2>Bug Reporting</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>If you should encounter any bugs, please report them to the authors at the <a href="https://forums.pocketplane.net/index.php?board=43.0">forum</a>. 
+        In addition, Spell-50 is <a href="https://github.com/Pocket-Plane-Group/spell50">available on GitHub</a>, so fixes and changes can be submitted by the community. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Installation" name="Installation"></a>
+      <h2>Installation</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>First time installing a mod? Check out G3's comprehensive tutorial: <a href="https://www.gibberlings3.net/forums/topic/33164-a-new-player&rsquo;s-guide-to-installing-and-playing-mods/">A 
+        New Player&rsquo;s Guide to Installing and Playing Mods</a>. </p>
+      <p><strong>Special Note for Siege of Dragonspear from Steam/GOG<br />
+        </strong>Good Old Games (GOG) and Steam both package the additional content for Siege of Dragonspear in a method that WeiDU, the tool used to install this mod, cannot access. You must  run a 
+        program called <a href="https://github.com/Argent77/A7-DlcMerger/releases">DLC Merger</a> on your SoD installation  before you can install this or any other WeiDU-based mod. </p>
+      <p><strong>Enhanced Editions Note</strong><br />
+        The Enhanced Editions are actively supported games. Please note that every   patch update will wipe your current mod setup! If in the middle of a   modded game you might want to delay the 
+        patch update (if possible) as   even after reinstalling the mods, you might not be able to continue with   your old savegames. Alternatively, copy the whole game's folder into a   new one 
+        that can be modded and will stay untouched by game patches. It is important that you install the mod to the language   version you are playing the game in. Otherwise, the dialogues of the 
+        mod   will not show but give error messages. </p>
+      <p><strong>Windows</strong><br />
+        Spell-50 for Windows is distributed as a self-extracting archive and includes a WeiDU installer. To install, simply double-click the archive and follow the instructions on screen.</p>
+      <p>Alternatively, the files can be extracted into your game directory using <a href="http://www.7-zip.org/download.html">7zip</a> or <a href="http://www.rarlab.com/download.htm">WinRAR</a>. 
+        When properly extracted, your game directory will contain <strong>setup-spell50.exe</strong> and the folder<strong> spell50</strong>. To install, double-click <strong>setup-spell50.exe</strong> and follow the instructions on screen.</p>
+      <p>You can run <strong>setup-spell50.exe</strong> in your game folder to reinstall, uninstall or otherwise change components.</p>
+      <p><strong>macOS</strong><br />
+        Spell-50 for macOS is distributed as a compressed tarball and includes a WeiDU installer.</p>
+      <p>First, extract the files from the tarball into your game directory. When properly extracted, your game directory will contain <strong>setup-spell50</strong>, <strong>setup-spell50.command</strong>, and the folder<strong> spell50</strong>. To install, double-click <strong>setup-spell50.command</strong> and follow the instructions on screen.</p>
+      <p>You can run <strong>setup-spell50.command</strong> in your game folder to reinstall, uninstall or otherwise change components.</p>
+      <p><strong>Linux</strong><br />
+        Spell-50 for Linux is distributed as a compressed tarball and does not include a WeiDU installer. Linux users will need to do a one-time install of <abbr title="Weimer Dialogue Utility">WeiDU</abbr> (and a few other adjustments) as described in <a href="https://moebiusproject.gitlab.io/mods_on_linux" rel="external nofollow noopener" target="_blank">this great writeup</a>. </p>
+      <p>To install, run 'WeInstall spell50' in your game folder. </p>
+      <p><strong> Note for Complete Uninstallation</strong><br />
+        In addition to the methods above for removing individual components, you can completely uninstall the mod using setup-spell50 --uninstall at the command line to 
+        remove all components without wading through prompts.</p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Contents" name="Contents"></a>
+      <h2>Contents</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>Spell-50 has one component that extends the spell cap to one of several present options, or a custom one selected by the player:</p>
+      <ul>
+        <li>50 (the original option)</li>
+        <li>40</li>
+        <li>30 (default cap of Icewind Dale)</li>
+        <li>20 (default cap of Baldur's Gate and Baldur's Gate II)</li>
+        <li>1</li>
+        <li>Custom value&mdash;open up custom_cap.disabled.txt in the spell50 folder and follow the directions there to enable this option. </li>
+      </ul>
+      <p>Note that the cap is enforced both ways&mdash;if you select a lower cap, spells which extend beyond it will be trimmed back to the cap. If you do lower the spell cap below a spell's minimum level, in general the spell will still have the effects of its minimum level. For example, Fireball has a minimum damage of 5d6, as level 5 is the first level you can legitimately learn and cast the spell. Even if you select a spell cap below five, Fireball will still do 5d6 damage. </p>
+      <p>The following spells are affected. Spells which needed special treatment are noted with an asterisk and details are in the notes below the list. Special versions of 
+        spells&mdash;like the innate version of Hold Undead for priests of Lathander, or beholder lightning bolts&mdash;are scaled like their normal arcane/divine counterparts. Also be aware that this list covers all spells in all games affected by Spell-50, but it may not apply to your specific game. For example, Poison is not changed on oIWD/IWDEE games as its effects do not scale, but it will be scaled on the Baldur's Gate series of games since its effects  vary by level. </p>
+      <h3>Arcane</h3>
+      <ul>
+        <li><strong>Level 1: </strong>Burning Hands; Chill Touch; Color Spray; Friends; Grease; Magic Missile*; Protection From Evil; Reflected Image; 
+        Shield; Shocking Grasp; Sleep</li>
+        <li><strong>Level 2: </strong>Blur; Cat's Grace; Chaos Shield; Decastave; Melf's Acid Arrow; Mirror Image; Protection from Petrification; Ray of Enfeeblement; Snilloc's Snowball Swarm;  Strength</li>
+        <li><strong>Level 3: </strong>Fireball; Flame Arrow; Ghost Armor; Haste; Hold Person; Hold Undead; Lance of Disruption; Lightning Bolt; Melf's Minute Meteors; 
+          Minor Spell Deflection; Monster Summoning I; Non-Detection; Protection From Cold; Protection From Fire; Protection from Normal Missiles; Skull Trap; 
+        Slow; Vampiric Touch; Wraith Form</li>
+        <li><strong>Level 4: </strong>Beltyn's Burning Blood; Confusion; Emotion, Hoplessness; Enchanted Weapon; Farsight; Fireshield (Blue); Fireshield (Red); 
+          Greater Malison; Improved Invisibility; Minor Globe of Invulnerability; Monster Summoning II; Mordenkainen's Force Missiles*; Polymorph Self; Shadow Monsters; Spider Spawn; 
+        Stoneskin; Vitriolic Sphere; Wizard Eye</li>
+        <li><strong>Level 5: </strong>Chaos; Cone of Cold; Conjure  Air/Earth/Fire/Water Elemental [IWD]; Conjure Lesser Air/Earth/Fire/Water Elemental [BG2]; Demi-Shadow Monsters; 
+          Hold Monster; Lower Resistance; Minor Spell Turning; Monster Summoning III; Phantom Blade; Protection From Acid; Protection From Electricity; Protection From Normal Weapons; 
+          Shadow Door; Shroud of Flame; Spell Immunity; Spell Shield; Summon Shadow; Sunfire</li>
+        <li><strong>Level 6: </strong>Antimagic Shell; Carrion Summons; Chain Lightning; Conjure  Air/Earth/Fire/Water Elemental [BG2]; Contingency; Globe of Invulnerability; 
+          Improved Haste; Lich Touch; Mislead; Monster Summoning IV; Otiluke's Freezing Sphere; Pierce Magic; Protection From Magic Energy; Shades; Spell Deflection; Summon Nishruu; 
+        Tenser's Transformation; Wyvern Call</li>
+        <li><strong>Level 7: </strong>Acid Storm; Control Undead; Mass Invisibility; Monster Summoning V; Mordenkainen's Force Blade; Mordenkainen's Sword; Project Image; Protection From 
+          The Elements;  Spell Turning; Summon Djinni; Summon Efreeti; Summon Hakeashar</li>
+        <li><strong>Level 8: </strong>Abi-Dalzim's Horrid Wilting; Incendiary Cloud; Monster Summoning VI; Protection From Energy; Simulacrum; Symbol, Fear; Symbol, Stun</li>
+        <li><strong>Level 9:</strong> Energy Blades; Monster Summoning VII; Summon (Dark) Planetar</li>
+      </ul>
+      <h3>Divine</h3>
+      <ul>
+        <li><strong>Level 1: </strong>Armor of Faith; Protection From Evil; Protection From Good; Sanctuary; Shillelagh; Spirit Ward; Sunscorch</li>
+        <li><strong>Level 2:</strong> Aid; Barkskin; Draw Upon Holy Might; Flame Blade;  Hold Person; Goodberry; Prayer; Resist Fire And Cold; Silence, 15' Radius; Spiritual Hammer</li>
+        <li><strong>Level 3: </strong>Call Lightning*; Glyph of Warding; Hold Animal; Holy Smite; Protection From Fire; Rigid Thinking; Unholy Blight</li>
+        <li><strong>Level 4: </strong>Death Ward; Farsight; Free Action; Holy Power; Mental Domination; Poison*; Produce Fire; Protection From Evil, 10' Radius; 
+        Protection From Good, 10' Radius; Protection From Lightning; Recitation; Spirit Fire; Static Charge</li>
+        <li><strong>Level 5: </strong>Champion's Strength; Chaotic Commands; Flame Strike; Greater Command; Iron Skins; Magic Resistance; Mass Cause Light Wounds; 
+        Mass Cure; Righteous Magic; Righteous Wrath of the Faithful; Undead Ward</li>
+        <li><strong>Level 6: </strong>Aerial Servant; Conjure Fire Elemental; Entropy Shield; Fire Seeds; Spiritual Lock</li>
+        <li><strong>Level 7: </strong>Aura of Flaming Death; Confusion; Conjure Earth Elemental; Energy Blades; Finger of Death; Fire Storm; Impervious Sanctity of Mind; 
+        Mass Raise Dead; Regeneration; Shield of the Archons; Summon (Fallen) Deva; Sunray; Symbol, Fear; Symbol, Stun; Wither</li>
+      </ul>
+      <h3>Other</h3>
+      <ul>
+        <li>Absorb Health; Boon of Lathander; Chaos of Battle; Children of the Night; Dancing Lights; Dispel Magic [Inquisitor]*; Divine Favor; Dragon Disciple Breath Attack; Faerie Fire; 
+          Flaming Fists; Greater Sun; Hardiness; Lay On Hands; Poison Weapon; Seeking Sword; Smite Evil; Storm Shield; Sun Soulray; other miscellaneous monster abilities</li>
+      </ul>
+<h3>Spell-Specific Notes</h3>
+      <p><strong>Call Lightning<br />
+      </strong>Call Lightning uses a special projectile which caps the maximum number of lightning strikes to 11. The damage is properly scaled out to the level cap. </p>
+      <p><strong>        Dispel Magic [Inquisitor]</strong><br />
+        Inquisitor Dispel Magic scales at double the caster level. As such its maximum cap is 25, which corresponds to a dispel level of 50, the highest available character level in the game. </p>
+      <p><strong>Magic Missile</strong><br />
+        Magic Missile uses a special projectile that changes at every level to accommodate additional missiles. However, the projectile maxes out at 11 missiles (level 21). On older engines (original Icewind Dale and Baldur's Gate), this means the spell cannot be extended beyond  level 21. On newer engines (original Baldur's Gate II or the Enhanced Editions) the spell will be extended out to the selected cap by having the spell cast itself multiple times to properly scale the number of missiles. For the most part this is done invisibly to the player, though they may see 
+        feedback in the combat log indicating multiple casts. </p>
+      <p><strong>Mordenkainen's Force Missiles</strong><br />
+        Like Magic Missile, Force Missiles is limited by its special projectile. Unlike Magic Missile, this can't easily be overcome by using the same multi-cast solution, so Force 
+        Missiles remains bound by the 11 missile maximum, meaning you don't get additional missiles at levels 40, 43, 46, and 49. However, the concussive damage  keeps scaling all the way out to level 50.      </p>
+      <p><strong>Poison</strong><br />
+        Poison does not have a linear progression so we use its last progression to extend it out to the selected level cap. Every two levels the initial damage increases 2d8; per round 
+        damage will remain capped at six but will last an additional round/2 levels. </p>
+      <p><strong>Spook</strong><br />
+        Spook is not extended at all as the save penalties quickly veer into ridiculous territory. While it has a flat duration of three rounds, the saving throw penalty increases by one 
+        every two levels which, if extended linearly, would result in a saving throw of -9 at level 18--meaning an enemy with a 1 saving throw only has a 50/50 chance to resist, and it'll only get worse from there. </p>
+    </div>
+    <div class="section"> </div>
+    <div class="ribbon_rectangle_h2"><a id="Contact" name="Contact"></a>
+      <h2>Contact Information</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>The Spell-50 is the hard work of Westley Weimer and is currently being maintained by CamDawg. For issues, suggestions and
+        general feedback, the <a href="https://forums.pocketplane.net/index.php?board=43.0">The Spell-50
+        forums</a> are the best resource. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Thanks" name="Thanks"></a>
+      <h2>Thanks and Acknowledgments</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p>From Wes: Thanks to the IEFF/IESDP for explaining the SPL format. </p>
+      <p>From Cam: Thankfully a lot of the tools to automate the process were already built, namely, a series of functions I had written for the BG2 Fixpack. So thanks to Wes for the 
+        original mod, and thanks to the community for still sticking around. </p>
+      <p><strong>Tools Used in Creation</strong></p>
+      <ul>
+        <li><a href="http://www.weidu.org/">WeiDU</a> by
+          Wes Weimer, the bigg, and Wisp</li>
+        <li> <a href="https://github.com/Argent77/NearInfinity">Near Infinity</a> by Jon Olav Hauglid, FredSRichardson, and argent77</li>
+        <li><a href="https://notepad-plus-plus.org/">Notepad++</a>, by the Notepad++ team</li>
+        <li><a href="https://www.gibberlings3.net/mods/tools/weidu/">WeiDU Notepad++
+          Highlighters</a> by cmorgan, updated by argent77 </li>
+        <li> <a href="http://www.contexteditor.org/">ConTEXT Text Editor</a> by Eden Kirin</li>
+        <li> <a href="https://gibberlings3.github.io/iesdp/"> IESDP</a> maintained
+          by igi and lynx</li>
+        <li> <a href="https://www.gibberlings3.net/mods/tools/weidu/">WeiDU ConTEXT
+          Highlighters </a> by Idobek, updated by cmorgan </li>
+      </ul>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="Credits" name="Credits"></a>
+      <h2>Credits and Copyright Information</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p> The modding community for the Infinity Engine has been going strong for
+        more than two decades now, and is the culmination of thousands of unpaid modding
+        hours by fellow fans of the game. Modders produce their best work and players
+        get the best, well-supported mods when we all work together. </p>
+      <p> There are two big ways to upset this harmony. One is to claim someone else's
+        work as your own. The second is to host and redistribute a mod without permission
+        from the author(s). </p>
+      <p> Be kind to your fellow players and modders. Don't do either. </p>
+    </div>
+    <div class="ribbon_rectangle_h2"><a id="History" name="History"></a>
+      <h2>Version History</h2>
+    </div>
+    <div class="ribbon_triangle_h2-l"></div>
+    <div class="ribbon_triangle_h2-r"></div>
+    <div class="section">
+      <p><strong>Version 7 - December 30, 2023</strong></p>
+      <ul>
+        <li>Updated to work with several additional games: BGEE, BG2EE, IWDEE, BGT, Tutu,  EET, original Baldur's Gate, and original Icewind Dale</li>
+        <li>Spell extensions are now done semi-automatically at install time and no longer overwrite existing spells</li>
+        <li>Ability to select level cap from a variety of options</li>
+        <li>Updated to cover spells from Icewind Dale imported into BG/BG2 games via IWDification, SCS, or Talents of Faer&ucirc;n </li>
+        <li>Spell descriptions are now updated, mainly to remove phrases indicating a maximum damage or other effects</li>
+        <li>Extended to cover these additional BG2 spells:
+          <ul>
+            <li><strong>Arcane:</strong> Grease; Magic Missile; Shocking Grasp; Melf's Acid Arrow; Flame Arrow; Spell Shield; Contingency; Symbol, Fear; Symbol, Stun</li>
+            <li><strong>Divine:</strong> Armor of Faith; Call Lightning; Hold Animal; Holy Smite; Unholy Blight; Shield of the Archons; Sunray</li>
+            <li><strong>Other:</strong> Kit versions of spells (Lathander's Hold Undead; Avenger's Chain Lightning; &amp;c.); other class/kit abilities like Lay On Hands</li>
+          </ul>
+        </li>
+      </ul>
+      <p><strong>Version 6 - May 6, 2003</strong></p>
+      <ul>
+        <li> New WeiDU, who knows. Does anyone still use this mod? </li>
+      </ul>
+      <p><strong> Version 5</strong></p>
+      <ul>
+        <li> Whoops, include the right files.</li>
+      </ul>
+      <p><strong> Version 4</strong></p>
+      <ul>
+        <li> Self-extracting RAR format, newer WeiDU. </li>
+      </ul>
+      <p><strong> Version 3</strong></p>
+      <ul>
+        <li> Redo the 50-th level extensions using only the following fields: 
+          power, value, time, num_dice, size_dice, save_bonus 
+          This should fix a number of weird problems (like durations above 
+          255 wrapping back to 1, or the game hanging when you cast 
+          pro-magic-energy). Thanks to Lee Jones for reporting this 
+          problem. </li>
+      </ul>
+      <p><strong> Version 2</strong></p>
+      <ul>
+        <li> GB's Fire Storm, Ice Storm, Meteor Swarm duration fix. </li>
+      </ul>
+      <p><strong>Version 1</strong></p>
+      <ul>
+        <li> Initial release. 50-th level extensions to some spells. </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
